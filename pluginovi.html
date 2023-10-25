@@ -10,6 +10,78 @@
        <li>izmeniti URL za logovanje na sajt.  (redirect login page)</li>
         <li>smanjiti pokusaj logovanja - (limit login) </li>
         <li>verifikacija za logovanje -(wp 2fa two factor)</li>
+
+        - izmeniti url za logovanje
+        
+        smanjiti pokusaj logovanja: sa limit login attemps
+        verifikacija za logovanje: wp 2FA two factor authentication
+        
+        limit login
+        2pas login
+        
+        ssl sertifikat
+        
+        
+        -ukljanje komentarisanja
+        ili ako zelimo komentarisanje onda treba uneti capcu ili da budu odobreni od strane admina
+        recapthca za coments
+        
+        akismet instalirati za komentare
+        
+        pluginove koje cemo da koristimo treba da instaliramo u posebni folder pa ako neko napadne ne moze da ih obrise
+        cudno zvuci
+        
+        backup obavezno
+        updraftplus
+        
+        firewwalls
+        wordfence
+        
+        --------------------------------------------------
+        bezbednost sajta tj editovanje wordpress fajlova
+        
+        wp config file > salt key and authentication keys , promeniti ih kako bi ponovo morali da se uloguju
+        
+        define('AUTH_KEY', 'k2b-o3t+;Mj,`Lp>0|s!+WB;gAg g_*Y5% K>+Rv2jQ7(K#}wV);L :1c)w6eFF+');
+        define('SECURE_AUTH_KEY', '{bmzhbISvA,y/;K+{WVl89[+oK c sPf$0{2EXdicB;QQ~1?TP0+[~Ch2At8O=RD');
+        define('LOGGED_IN_KEY', '|OYG0#wco%Z`@-fx%&%:__5feS@mj59pU!yo_Up^,!&A3{Qh(b*{0RpE}56n/93E');
+        define('NONCE_KEY', 'o|rotcd_T-oKUpP[2qqKcx-&o`H&xn]JuQ$+0bi(TwS2C8ZjbK}~F9;xs|[.1$wP');
+        define('AUTH_SALT', '+#)~ubi[q&v+wD <}b,{]xOlOzB#bc[o$`Hs}:hRRTjRsPlk;gQAQG+GlV3@bf}m');
+            define('SECURE_AUTH_SALT', 'M1L5-|MdhiO28dE-C|.5f-x}?lDgz2}5Q~yi)IEO+Z5-=#VEoBzUOQSx@Q];19 n' );
+            define('LOGGED_IN_SALT', ',T9D&)McaAu>aU+br3T%Jv@UC%+l9<9f0+MSOE49?pRc(sk[5kv.~;a$/p|xjyp{' );
+            define('NONCE_SALT', 'QB!~|t@,-h+IIclBpf{Dqzy_XqhltiEg]uKM=5=F,]+R>LNXUu|6hxoLz@!7jny2' ); -u okviru teme postoji
+            editor pa mozemo i njega da ugasimo kako ne bi moglo da se nasteti sajtu theme editor . Dakle ode se u c panel,
+            wp-config i doda se recenica ('DISALLOW_FILE_EDIT',true); - sa ovim smo zastitili da ako se neko uloguje na sajt ne
+            moze da pridje hostingu preimenovati prefix baze> tako da je $table_prefix='wp_' -u nesto drugo zatim otici u bazu
+            podataka, promeniti u php myadminu nazive baze tj sve kolone tabele da imaju drugaciji prefix
+        
+        
+        
+        
+        
+        
+            secure tako sto se disable xml-rpc -> insalirati plugin disable xml-rpc-api ili napisati kod (prekopirati u
+            htaccess)
+        
+        
+        
+            disable php executions , kako ne bi moglo da se upladuje sta hoce po zelji
+            tako sto se u htaccess unese kod
+            <Files *.php>
+                deny from all
+            </Files>
+        
+        
+            pa se taj isti htaccess kopira u wp-includes, pa se ide u wp-content pa u uploads folder i tu se ubaci ovaj htacces
+            isto i onda cini zabranu da se upladuje
+        
+        
+            disabling directory indexing and browsing u htaccesu se unese pred kraj htaccessa
+            Options -Indexes i onda smo ga disablovali
+        
+            zastitit sajt tako sto cemo dodati folder permisions
+        
+            i tu podesiti sa su folderi onli friteblu bu you
          
     </ol>
 </body>
