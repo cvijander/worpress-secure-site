@@ -1,0 +1,10 @@
+- izmeniti url za logovanje 
+
+smanjiti pokusaj logovanja: sa limit login attemps
+verifikacija za logovanje:  wp 2FA two factor authentication 
+
+limit login 
+2pas login 
+
+ssl sertifikat 
+
